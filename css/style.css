@@ -1,0 +1,145 @@
+:root {
+    --bg-color : rgb(152, 252, 152);
+    --bg-color2: rgb(137, 197, 253);
+    --bg-color3 : rgb(243, 137, 253);
+    --main-color : rgb(212, 212, 212);
+    --second-color : rgb(36, 36, 36);
+    --third-color : rgb(20, 20, 20);
+    --head-foot-color : rgb(14, 14, 14);
+    --content-color : rgb(31, 67, 92);
+    --large-text-size : 50px;
+    --small-text-size : 10px;
+}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    background-image: linear-gradient(to bottom right, var(--bg-color), var(--bg-color2), var(--bg-color3));
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: var(--large-text-size);
+}
+
+
+header, footer {
+    background-color: var(--head-foot-color);
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: rgb(245, 245, 245);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(206, 204, 204);
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    
+}
+
+#mainPhoto {
+    display: block;
+    padding-top: 20px;
+    height: 175px;
+    width: 300px;
+    margin: auto;
+    transition-property: height, width;
+    transition-duration: 1.5s;
+}
+
+#mainPhoto:hover {
+   height: 275px;
+   width: 400px;
+   
+}
+
+#gitLink {
+    display: block;
+    margin: auto;
+    border: none;
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+#gitLink:hover {
+    background-color: var(--third-color);
+    cursor: pointer;
+}
+
+section {
+    color: var(--main-color);
+    padding: 10px;
+    margin: 20px;
+    background-color: var(--second-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 1s;
+}
+
+section:hover {
+    background-color: var(--third-color);
+}
+
+#aboutMeH2 {
+    color: var(--bg-color);
+}
+
+#projectsH2 {
+    color: var(--bg-color2);
+}
+
+#contactH2 {
+    color: var(--bg-color3);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+h5 {
+    font-size: var(--small-text-size);
+}
+
+
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    header, footer {
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
+}
