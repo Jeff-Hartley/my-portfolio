@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeff Hartley's Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="typed.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -31,12 +32,12 @@
     <section id="about">
         <h2 id="aboutMeH2">About Me</h2>
         <!--stylized this way to be easier to read in editor-->
-        <p id="aboutP">Hello. My name is Jeff Hartley. I am a 31-year-old Computer Programming student in my first semester at Humber College. 
+        <span id="typed"></span><p id="aboutP">Hello. My name is Jeff Hartley. I am a 31-year-old Computer Programming student in my first semester at Humber College. 
             I started creating and styling websites when I was very young, using free webhosting sites like Piczo. 
             I really enjoy web development and learning different useful coding techniques in JavaScript. 
             My career goal is to work in Web Development or Software Development. Creating useful websites or apps as a career is why I got into computer programming.
             Outside of that, I really enjoy my family time. My family is my life. I'm an avid sports fan, I've loved the New York Giants in the NFL my whole life. 
-            Strategic games are a huge enjoyment of mine. I like board games, video games and escape rooms.</p>
+            Strategic games are a huge enjoyment of mine. I like board games, video games and escape rooms.</p></span>
     </section>
     
 
@@ -83,7 +84,39 @@
     <!--Code for the 'Contact' section-->
     <section id="contact">
         <h2 id="contactH2">Contact Me</h2>
-        <p>Currently a place holder for future work.</p>
+        <div id="formDiv">
+            <form id="contactFormID" action="#" method="POST">
+                <p id="formTitle">Contact The Site Creator</p>
+                <!-- Input fields will go below -->
+                
+                <label for="Name">Name:</label><br>
+                <input type="text" id="nameInput" name="name" required><br><br>
+                <span class="error" id="nameError"></span><br>
+
+                <label for="company">Company:</label><br>
+                <input type="text" id="companyInput" name="company" required><br><br>
+                <span class="error" id="companyError"></span><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="emailInput" name="email" required><br><br>
+                <span class="error" id="emailError"></span><br>
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="text" id="phoneInput" name="phone" minlength="7"><br><br>
+                <span class="error" id="phoneError"></span><br>
+
+                <label for="message">Message Me:</label><br>
+                <textarea form="contactFormID" id="messageInput" name="message" placeholder="Enter your message here" minlength="20"></textarea><br><br>
+                <span class="error" id="messageError"></span><br>
+
+                <input type="radio" name="confirmation" value="confirmation" required>I confirm the information above is accurate</label><br><br>
+                <span class="error" id="confirmationError"></span>
+                <button id="submitFormButton">Submit</button>
+            </form>
+        
+            <p id="successMessage" class="success"></p>
+        </div>
+
     </section><br><br><br>
 
     <!--Code for the footer-->

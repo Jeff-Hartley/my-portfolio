@@ -1,0 +1,25 @@
+Form Structure Plan
+
+Name 
+-> input = text, required 
+-> error message if it is left blank
+
+Company 
+-> input = text, required 
+-> error message if it is left blank
+
+Email 
+-> input = email, required 
+-> error message if it is left blank or improper regex
+
+Telephone 
+-> input = text, required 
+-> error message if it is blank or not long enough, set to 7 characters (most are 10 with area code.. take into consideration some areas may not have the same area codes)
+
+Message 
+-> input = textarea, required 
+-> error message if it is blank or not long enough (20 characters feels like a good length if someone wants to be direct to the point)
+
+Confirm data is true
+-> input = radio button, required
+-> error message if it is not clicked
