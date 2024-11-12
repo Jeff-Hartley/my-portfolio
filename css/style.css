@@ -1,19 +1,21 @@
 :root {
     --bg-color : rgb(152, 252, 152);
     --bg-color2: rgb(137, 197, 253);
-    --bg-color2hover: rgb(124, 185, 241);
+    --bg-color2hover: rgb(116, 177, 233);
     --bg-color3 : rgb(243, 137, 253);
+    --bg-color3hover : rgb(222, 116, 231);
     --main-color : rgb(212, 212, 212);
     --second-color : rgb(36, 36, 36);
     --third-color : rgb(20, 20, 20);
     --head-foot-color : rgb(14, 14, 14);
     --content-color : rgb(31, 67, 92);
     --large-text-size : 60px;
-    --projTitle-size : 45px;
+    --section-text-size : 45px;
+    --title-size : 35px;
     --small-text-size : 10px;
 }
 
-
+/*CSS for the main body of the website below*/ 
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -93,7 +95,7 @@ nav ul li a:hover {
 
 section {
     color: var(--main-color);
-    padding: 10px;
+    padding: 20px;
     margin: 20px;
     background-color: var(--second-color);
     border-radius: 10px;
@@ -105,8 +107,10 @@ section:hover {
     background-color: var(--third-color);
 }
 
+/*CSS for the about me section of the website*/ 
 #aboutMeH2 {
     color: var(--bg-color);
+    font-size: var(--section-text-size);
     padding: 10px;
 }
 
@@ -114,8 +118,10 @@ section:hover {
     padding: 15px;
 }
 
+/*CSS for the projects section of the website*/ 
 #projectsH2 {
     color: var(--bg-color2);
+    font-size: var(--section-text-size);
     padding: 10px;
 }
 
@@ -136,7 +142,8 @@ section:hover {
 
 .projectTitle {
     text-align: center;
-    font-size: var(--projTitle-size);
+    color: var(--bg-color2);
+    font-size: var(--title-size);
 }
 
 .showDescButton {
@@ -155,18 +162,76 @@ section:hover {
 }
 
 .projectDesc {
-
     text-align: center;
     padding: 10px;
     margin: auto;
     width: 40%;
 }
 
+/*CSS for the contact section of the website*/ 
 #contactH2 {
     color: var(--bg-color3);
+    font-size: var(--section-text-size);
     padding: 10px;
 }
 
+#formDiv {
+    border: solid 2px var(--bg-color3);
+    border-radius: 10px;
+    background-color: var(--third-color);
+    padding: 20px;
+    margin: auto;
+    width: 40%;
+}
+
+#formTitle {
+    text-align: center;
+    color: var(--bg-color3);
+    font-size: var(--title-size);
+}
+
+label {
+    font-weight: bold;
+    padding: 6px;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+#messageInput {
+    display: block;
+    width: 400px;
+    height: 200px;
+}
+
+#submitFormButton {
+    display: block;
+    margin: auto;
+    border: none;
+    padding: 10px 18px;
+    background-color: var(--bg-color3);
+    color: var(--second-color);
+}
+
+#submitFormButton:hover {
+    background-color: var(--bg-color3hover);
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.success {
+    color: chartreuse;
+    font-weight: bold;
+}
+
+
+/*Footer CSS*/ 
 footer {
     color: white;
     text-align: center;
