@@ -9,15 +9,15 @@
     --third-color : rgb(20, 20, 20);
     --head-foot-color : rgb(14, 14, 14);
     --content-color : rgb(31, 67, 92);
-    --large-text-size : 60px;
-    --section-text-size : 45px;
+    --large-text-size : 45px;
+    --section-text-size : 40px;
     --title-size : 35px;
     --small-text-size : 10px;
 }
 
 /*CSS for the main body of the website below*/ 
 body {
-    font-family: fantasy, serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--main-color);
@@ -27,6 +27,7 @@ body {
 
 
 h1 {
+    font-family: fantasy, serif;
     font-style: oblique; 
     font-size: var(--large-text-size);
 }
@@ -100,7 +101,7 @@ section {
     margin: 20px;
     background-color: var(--second-color);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     transition: 1s;
 }
 
@@ -110,8 +111,10 @@ section:hover {
 
 /*CSS for the about me section of the website*/ 
 #aboutMeH2 {
+    font-family: fantasy, serif;
     color: var(--bg-color);
     font-style: oblique;
+    text-decoration: solid underline;
     font-size: var(--section-text-size);
     padding: 10px;
 }
@@ -122,8 +125,10 @@ section:hover {
 
 /*CSS for the projects section of the website*/ 
 #projectsH2 {
+    font-family: fantasy, serif;
     color: var(--bg-color2);
     font-style: oblique;
+    text-decoration: solid underline;
     font-size: var(--section-text-size);
     padding: 10px;
 }
@@ -139,9 +144,8 @@ section:hover {
     padding: 30px;
     height: 350px;
     width: 600px;
-    transition: 1s;
+    
 }
-
 
 .projectTitle {
     text-align: center;
@@ -173,8 +177,10 @@ section:hover {
 
 /*CSS for the contact section of the website*/ 
 #contactH2 {
+    font-family: fantasy, serif;
     color: var(--bg-color3);
     font-style: oblique;
+    text-decoration: solid underline;
     font-size: var(--section-text-size);
     padding: 10px;
 }
@@ -281,7 +287,8 @@ h5 {
         display: block;
         margin: auto;
         padding: 5px;
-        width: 200px;
-        height: 100px;
+        width: 100px;
+        height: 200px;
     }
 }
+
