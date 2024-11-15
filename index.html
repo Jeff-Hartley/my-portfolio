@@ -20,11 +20,18 @@
     </nav>
     </header><br>
 
+    <!--welcome to my site input-->
+    <input type="text" id="whoAreYou" placeholder="Hello, what's your name?"><br>
+    <button class="outerBtn" id="save-btn">Save Name</button><br>
+    <button class="outerBtn" id="clear-btn">Clear Name</button><br>
+
+    <p id="displayWelcomeMsg"></p><br>
+
     <!--Main photo and a button link-->
     <img src="https://as2.ftcdn.net/v2/jpg/05/08/39/93/1000_F_508399305_VFbiCDyBXO3gLKMRasSMGciAyZXu5pIv.jpg" id="mainPhoto" alt="Coding"><br>
     
     <a href="https://github.com/Jeff-Hartley?tab=repositories" target="_blank">
-        <button id="gitLink">GitHub Repository</button>
+        <button class="outerBtn" id="gitLink">GitHub Repository</button>
     </a>
     
     <!--Code for the 'About' section-->
@@ -84,7 +91,7 @@
     <section id="contact">
         <h2 id="contactH2">Contact Me</h2>
         <div id="formDiv">
-            <form id="contactFormID" action="#" method="POST">
+            <form id="contactFormID" action="#" method="post">
                 <p id="formTitle">Contact The Site Creator</p>
                 <!-- Input fields will go below -->
                 
@@ -110,13 +117,13 @@
 
                 <input type="radio" name="confirmation" value="confirmation" required>I confirm the information above is accurate</label><br><br>
                 <span class="error" id="confirmationError"></span>
-                <button id="submitFormButton">Submit</button>
+                <button id="submitFormButton" type="submit">Submit</button>
             </form>
         
             <p id="successMessage" class="success"></p>
         </div>
 
-    </section><br><br><br>
+    </section><br>
 
     <!--Code for the footer-->
     <footer>
