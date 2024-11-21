@@ -1,5 +1,3 @@
-import 'animate.css';
-
 // variable for the button to show description of projects 
 const descBtn = document.getElementsByClassName("showDescButton");
 const colorWayBtn = document.getElementById("colorWayBtn");
