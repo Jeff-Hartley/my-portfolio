@@ -153,6 +153,19 @@ section:hover {
     padding: 10px;
 }
 
+.filter-btn {
+    border: none;
+    padding: 10px 18px;
+    background-color: var(--bg-color2);
+    color: var(--second-color);
+}
+
+.filter-btn:hover {
+    background-color: var(--bg-color2hover);
+    color: var(--second-color);
+    cursor: pointer;
+}
+
 #allProjects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -289,11 +302,11 @@ body.warm-mode #projectsH2, body.warm-mode .projectTitle {
     color: var(--bg-colorwarm2);
 }
 
-body.warm-mode .showDescButton {
+body.warm-mode .showDescButton, body.warm-mode .filter-btn {
     background-color: var(--bg-colorwarm2);
 }
 
-body.warm-mode .showDescButton:hover {
+body.warm-mode .showDescButton:hover, body.warm-mode .filter-btn:hover {
     background-color: var(--bg-colorwarm2hover);
 }
 

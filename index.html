@@ -29,7 +29,7 @@
     <p id="displayWelcomeMsg"></p><br>
 
     <!--Main photo and a button link-->
-    <img src="https://as2.ftcdn.net/v2/jpg/05/08/39/93/1000_F_508399305_VFbiCDyBXO3gLKMRasSMGciAyZXu5pIv.jpg" id="mainPhoto" alt="Coding"><br>
+    <img src="https://as2.ftcdn.net/v2/jpg/05/08/39/93/1000_F_508399305_VFbiCDyBXO3gLKMRasSMGciAyZXu5pIv.jpg" id="mainPhoto" alt="Coding" loading="lazy"><br>
     
     <a href="https://github.com/Jeff-Hartley?tab=repositories" target="_blank">
         <button class="outerBtn" id="gitLink">GitHub Repository</button>
@@ -51,12 +51,16 @@
     <!--Code for the 'Projects' section-->
     <section id="projects">
         <h2 id="projectsH2">Projects</h2>
-        
+
+    <button class="filter-btn" data-category="javascript">JavaScript</button>
+    <button class="filter-btn" data-category="html-css">HTML/CSS</button>
+    <button class="filter-btn" data-category="all">Display All</button>
+
         <!--Project 1-->
         <div id="allProjects">
-            <div class="project">
+            <div class="project" data-category="javascript">
                 <p class="projectTitle">Dynamic Blog Site</p>
-                <img class="projectImg" src="project1.png" alt="Image of the dynamic blog site">
+                <img class="projectImg" src="project1.png" alt="Image of the dynamic blog site" loading="lazy">
                 <button class="showDescButton">Show Details</button>
                 <div class="projectDesc" style="display: none">
                     <!--The details that will appear when the button is clicked-->
@@ -69,9 +73,9 @@
             </div>
 
             <!--Project 2-->
-            <div class="project">
+            <div class="project" data-category="html-css">
                 <p class="projectTitle">Web Storage API</p>
-                <img class="projectImg" src="project2.png" alt="Image of the location finder">
+                <img class="projectImg" src="project2.png" alt="Image of the location finder" loading="lazy">
                 <button class="showDescButton">Show Details</button>
                 <div class="projectDesc" style="display: none">
                     <!--The details that will appear when the button is clicked-->
