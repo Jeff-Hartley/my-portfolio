@@ -1,7 +1,6 @@
-//this is here because it helps with the form not actually submitting with the preventdefault
-document.addEventListener("DOMContentLoaded", (event) => {
 // variable for the button to show description of projects 
 const descBtn = document.getElementsByClassName("showDescButton");
+const colorWayBtn = document.getElementById("colorWayBtn");
 
 // for loop for the button 
 for (let i = 0; i < descBtn.length; i++) {
@@ -21,13 +20,22 @@ for (let i = 0; i < descBtn.length; i++) {
             projectDesc.style.display = 'none';
             descBtn[i].textContent = 'Show Description'; 
         }
-    });
-}
+
+});        
+}    
+
+// variables for when there is a switch of the colorway of the website from cool to warm
+const aboutMeH2 = document.getElementById('aboutMeH2');
+const projectsH2 = document.getElementById('projectsH2');
+const contactH2 = document.getElementById('contactH2');
+const projT = document.getElementById('projectTitle');
+const projT2 = document.getElementById('projectTitle2');
+const formTitle = document.getElementById('formTitle');
 
 
 
 //variable for the submit form button
-const submitFormBtn = document.getElementById("submitFormButton")
+const submitFormBtn = document.getElementById("submitFormButton");
 
 //variables for the inputs of the form as well as the form itself
 const contactFormID = document.getElementById("contactFormID");
@@ -43,14 +51,27 @@ const nameError = document.getElementById('nameError');
 const companyError = document.getElementById('companyError');
 const emailError = document.getElementById('emailError');
 const phoneError = document.getElementById('phoneError');
-const messageError = document.getElementById('messageeError');
+const messageError = document.getElementById('messageError');
 
 //success message for theform
 const successMessage = document.getElementById('successMessage');
 
+// event listener for the colorway change button
+colorWayBtn.addEventListener('click', () => {
+    document.body.classList.toggle('warm-mode');
+    
+    //when it is in warm mode
+    if (document.body.classList.contains('warm-mode')) {
+        colorWayBtn.textContent = 'Cool Mode';
+    //when it is in cool mode
+    } else {
+        colorWayBtn.textContent = 'Warm Mode';
+    }
 
 });
 
+
+// event listener for the contact form
     contactFormID.addEventListener('submit', function(event) {
         //clears any previous error messages as well as the success message
         nameError.textContent = '';
@@ -108,6 +129,7 @@ const successMessage = document.getElementById('successMessage');
         
 });
 
+// function for email validation
 let validateEmail = (emailInput) => {
     const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     return re.test(String(emailInput));

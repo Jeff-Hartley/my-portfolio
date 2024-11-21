@@ -4,18 +4,26 @@
     --bg-color2hover: rgb(116, 177, 233);
     --bg-color3 : rgb(243, 137, 253);
     --bg-color3hover : rgb(222, 116, 231);
+    --bg-colorwarm : rgb(250, 118, 118);
+    --bg-colorwarm2 : rgb(250, 182, 118);
+    --bg-colorwarm2hover : rgb(235, 167, 103);
+    --bg-colorwarm3 : rgb(250, 237, 118);
+    --bg-colorwarm3hover : rgb(236, 223, 99);
     --main-color : rgb(212, 212, 212);
     --second-color : rgb(36, 36, 36);
     --third-color : rgb(20, 20, 20);
     --head-foot-color : rgb(14, 14, 14);
-    --content-color : rgb(31, 67, 92);
     --large-text-size : 45px;
     --section-text-size : 40px;
     --title-size : 35px;
     --small-text-size : 10px;
 }
 
-/*CSS for the main body of the website below*/ 
+html {
+    scroll-behavior: smooth;
+}
+
+/*CSS for the main body*/ 
 body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
@@ -165,6 +173,12 @@ section:hover {
     font-size: var(--title-size);
 }
 
+#projectTitle2 {
+    text-align: center;
+    color: var(--bg-color2);
+    font-size: var(--title-size);
+}
+
 .showDescButton {
     display: block;
     margin: auto;
@@ -259,6 +273,44 @@ input {
     font-weight: bold;
     text-decoration: double underline overline 6px;
     font-size: var(--section-text-size);
+}
+
+/* css for 'warm mode' */
+.warm-mode {
+    background-color: var(--main-color);
+    background-image: linear-gradient(to bottom right, var(--bg-colorwarm), var(--bg-colorwarm2), var(--bg-colorwarm3)); 
+}
+
+body.warm-mode #aboutMeH2 {
+    color: var(--bg-colorwarm);
+}
+
+body.warm-mode #projectsH2, body.warm-mode .projectTitle {
+    color: var(--bg-colorwarm2);
+}
+
+body.warm-mode .showDescButton {
+    background-color: var(--bg-colorwarm2);
+}
+
+body.warm-mode .showDescButton:hover {
+    background-color: var(--bg-colorwarm2hover);
+}
+
+body.warm-mode #contactH2, body.warm-mode #formTitle {
+    color: var(--bg-colorwarm3);
+}
+
+body.warm-mode #formDiv {
+    border: solid 2px var(--bg-colorwarm3);
+}
+
+body.warm-mode #submitFormButton {
+    background-color: var(--bg-colorwarm3);
+}
+
+body.warm-mode #submitFormButton:hover {
+    background-color: var(--bg-colorwarm3hover);
 }
 
 
