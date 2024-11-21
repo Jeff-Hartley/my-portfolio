@@ -127,7 +127,6 @@ colorWayBtn.addEventListener('click', () => {
             messageInput.value = '';
             successMessage.textContent = 'Form submitted successfully!'
         }
-
         
 });
 
